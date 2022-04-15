@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      flex-direction: column;
+      background: #0d131c;
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+      font-size: 14px;
+      color: #8b93a3
+    }
+    .mainContainer{
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      background: #141d29;
+      border-radius: 16px;
+      width: 240px;
+      height: 100%;
+      padding: 1rem;
+    }
+    .imageContainer{
+      height: 240px;
+      position: relative;
+    }
+    .imageContainer img{
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .imageContainer svg{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    .imageContainer:hover img{
+      opacity: 0.5;
+    }
+    .imageContainer:hover{
+      background: #00FFF8;
+      border-radius: 8px;
+      height: 240px;
+      cursor: pointer;
+    }
+    .imageContainer:hover svg{
+      opacity: 1;
+    }
+    h1{
+      color: white;
+      margin-top: 1rem;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    h1:hover{
+      cursor: pointer;
+      color: #00FFF8;
+    }
+    h3{
+      color: #00FFF8;
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+    .descriptionText{
+      color: #8b93a3;
+    }
+    .leftSection{
+      display: flex;
+      align-items: center;
+    }
+    .rightSection{
+      display: flex;
+      align-items: center;
+    }
+    .rightSection p{
+      margin-left: 5px;
+      color: #8BACD9;
+    }
+    hr{
+      width: 100%;
+      border: 1px solid #8b93a3;
+      opacity: 0.2;
+    }
+    .cardFooter{
+      display: flex;
+      align-items: center;
+    }
+    .cardFooter img{
+      width: 30px;
+      height: 30px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .creatorName{
+      color: white;
+    }
+    .creatorName:hover{
+      color: #00FFF8;
+      cursor: pointer;
+    }
+    footer{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+    .attribution { font-size: 14px; text-align: center; color: #8b93a3}
+    .attribution a { color: #00FFF8; }
+  </style>
+</head>
+<body>
+  <div class='mainContainer'>
+    <div class='imageContainer'>
+      <img src="./images/image-equilibrium.jpg" alt="image-equilibrium">
+      <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h48v48H0z"/><path d="M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+    </div>
+    <h1>Equilibrium #3429</h1>
+    <p class='descriptionText'>Our Equilibrium collection promotes balance and calm.</p>
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+      <div class="leftSection">
+        <svg width="11" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z" fill="#00FFF8"/></svg>
+        <h3>0.041 ETH</h3>
+      </div>
+      <div class="rightSection">
+        <svg width="17" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z" fill="#8BACD9"/></svg>
+        <p>3 days left</p>
+      </div>
+    </div>
+    <hr>
+    <div class='cardFooter'>
+      <img src="./images/image-avatar.png" alt="">
+      <p>Creation of <span class='creatorName'>Jules Wyvern</span></p>
+    </div>
+  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/rjrahul98">Rahul Mehta</a>.
+    </div>
+  </footer>
+
+</body>
+</html>
